@@ -3,7 +3,8 @@ name: CI to Docker Hub
 on:
   push:
     tags:
-      - "v*.*.*"
+      - "v*.*.*"  
+      # This ensures that the main CI will only trigger if we tag our commits with V.n.n.n.
 jobs:
   build:
     runs-on: ubuntu-latest
